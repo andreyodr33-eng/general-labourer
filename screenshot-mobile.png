@@ -1,0 +1,28 @@
+from PIL import Image, ImageDraw, ImageFont 
+ 
+# Создадим простой скриншот визитки для мобильного (640x360) 
+width, height = 640, 360 
+img = Image.new('RGB', (width, height), color='#ffffff') 
+draw = ImageDraw.Draw(img) 
+ 
+# Добавим примерный текст визитки 
+title = "General Labourer for Hire" 
+services = "- Loading & unloading\n- Painting\n- Cleaning\n- Small repairs\n- Help around the house" 
+ 
+# Настройка шрифта (можно использовать стандартный) 
+try: 
+    font_title = ImageFont.truetype("arial.ttf", 28) 
+    font_text = ImageFont.truetype("arial.ttf", 20) 
+except: 
+    font_title = ImageFont.load_default() 
+    font_text = ImageFont.load_default() 
+ 
+# Нарисуем текст 
+draw.text((20, 20), title, fill="#2c3e50", font=font_title) 
+draw.multiline_text((20, 70), services, fill="#333333", font=font_text, spacing=6) 
+ 
+# Сохраним файл 
+screenshot_path = "/mnt/data/screenshot-mobile.png" 
+img.save(screenshot_path) 
+screenshot_path
+     

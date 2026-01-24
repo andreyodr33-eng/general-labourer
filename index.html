@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>General Labourer for Hire – Dublin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Стили -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PWA -->
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#2c3e50">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 30px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        .photo {
+            text-align: center;
+        }
+
+        .photo img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 3px solid #2c3e50;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 15px;
+            color: #2c3e50;
+        }
+
+        p {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .btn {
+            display: block;
+            text-align: center;
+            margin-top: 15px;
+            padding: 12px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 18px;
+            color: white;
+        }
+
+        .phone { background: #27ae60; }
+        .phone:hover { background: #219150; }
+
+        .whatsapp { background: #25D366; }
+        .facebook { background: #1877f2; }
+
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 14px;
+            color: #777;
+        }
+
+        /* Скриншот мобильного */
+        .screenshot img {
+            width: 100%;
+            max-width: 640px;
+            border-radius: 10px;
+            display: block;
+            margin: 20px auto 0 auto;
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <!-- Фото работника -->
+    <div class="photo">
+        <img src="photo.jpg" alt="General Labourer">
+    </div>
+
+    <h1>General Labourer for Hire</h1>
+
+    <p>
+        Reliable and hardworking labourer available in Dublin.<br>
+        Fast, honest and affordable work.
+    </p>
+
+    <h3>Services:</h3>
+    <ul>
+        <li>Loading & unloading</li>
+        <li>Painting (walls, fences)</li>
+        <li>Cleaning (houses, gardens, sites)</li>
+        <li>Small repairs</li>
+        <li>Help around the house</li>
+        <li>Other jobs on request</li>
+    </ul>
+
+    <!-- Контакты -->
+    <a class="btn phone" href="tel:+3530874893815">📞 Call: +353 087 489 3815</a>
+    <a class="btn whatsapp" href="https://wa.me/3530874893815">💬 WhatsApp</a>
+    <a class="btn facebook" href="https://facebook.com/yourprofile">📘 Facebook</a>
+
+    <!-- Скриншот мобильного -->
+    <div class="screenshot">
+        <img src="screenshot-mobile.png" alt="Mobile Preview">
+    </div>
+
+    <div class="footer">
+        Available 7 days a week • Dublin
+    </div>
+
+</div>
+
+<!-- Service Worker для PWA -->
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js')
+      .then(reg => console.log('Service Worker registered!', reg))
+      .catch(err => console.log('Service Worker registration failed:', err));
+  });
+}
+</script>
+
+</body>
+</html>
+     
