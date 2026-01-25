@@ -1,15 +1,17 @@
+
+     
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>General Labourer for Hire – Dublin</title>
+    <title>General Labourer</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Стили -->
-    <link rel="stylesheet" href="style.css">
-
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
+    <link rel="icon" type="image/png" sizes"32x32" href="icon-32.png">
+    <link rel="icon" type="image/png" sizes"192x192" href="icon-192.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="icon-192.png"> 
     <meta name="theme-color" content="#2c3e50">
 
     <style>
@@ -84,15 +86,7 @@
             color: #777;
         }
 
-        /* Скриншот мобильного */
-        .screenshot img {
-            width: 100%;
-            max-width: 640px;
-            border-radius: 10px;
-            display: block;
-            margin: 20px auto 0 auto;
-        }
-    </style>
+ </style>
 </head>
 
 <body>
@@ -125,27 +119,13 @@
     <a class="btn whatsapp" href="https://wa.me/3530874893815">💬 WhatsApp</a>
     <a class="btn facebook" href="https://facebook.com/yourprofile">📘 Facebook</a>
 
-    <!-- Скриншот мобильного -->
-    <div class="screenshot">
-        <img src="screenshot-mobile.png" alt="Mobile Preview">
-    </div>
+  
 
     <div class="footer">
         Available 7 days a week • Dublin
     </div>
 
 </div>
-
-<!-- Service Worker для PWA -->
-<script>
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker.register('service-worker.js')
-      .then(reg => console.log('Service Worker registered!', reg))
-      .catch(err => console.log('Service Worker registration failed:', err));
-  });
-}
-</script>
 
 </body>
 </html>
