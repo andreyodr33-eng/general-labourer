@@ -17,15 +17,8 @@
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
-    }
-  ],
-  "screenshots": [
-    {
-      "src": "screenshot-mobile.png",
-      "sizes": "640x360",
-      "type": "image/png"
-      "form_factor": "wide"
-    }
+     }
   ]
 }
+
      
