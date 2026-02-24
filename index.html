@@ -1,132 +1,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>General Labourer</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAUL</title>
 
-    <!-- Стили -->
-    <link rel="icon" type="image/png" sizes"32x32" href="icon-32.png">
-    <link rel="icon" type="image/png" sizes"192x192" href="icon-192.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="icon-180.png"> 
-    <meta name="theme-color" content="#2c3e50">
+<link rel="manifest" href="manifest.json">
+ <link rel="icon" href="icon-192.png" type="image/png">
+<meta name="theme-color" content="#222222">
+ 
+<style>
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  background:
+    linear-gradient(45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(-45deg, #e0e0e0 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #e0e0e0 75%),
+    linear-gradient(-45deg, transparent 75%, #e0e0e0 75%);
+  background-size: 40px 40px;
+  background-position: 0 0, 0 20px, 20px -20px, -20px 0px;
+}
 
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f2f2f2;
-            color: #333;
-        }
+.flip-card {
+  width: 320px;
+  height: 180px;
+  perspective: 1000px;
+}
 
-        .container {
-            max-width: 600px;
-            margin: 30px auto;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 15px rgba(0,0,0,0.1);
-        }
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+}
 
-        .photo {
-            text-align: center;
-        }
+@media (hover: hover) and (pointer: fine) {
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+}
 
-        .photo img {
-            width: 150px;
-            height: 150px;
-            object-fit: cover;
-            border-radius: 50%;
-            border: 3px solid #2c3e50;
-        }
+.flip-card-inner.flipped {
+  transform: rotateY(180deg);
+}
 
-        h1 {
-            text-align: center;
-            margin-top: 15px;
-            color: #2c3e50;
-        }
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  padding: 15px;
+  box-sizing: border-box;
+  background: #222;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-        p {
-            text-align: center;
-            font-size: 16px;
-        }
+ .flip-card-front *,
+ .flip-card-back * {
+      margin: 0;
+      padding: 0;
+      line-height: 1.85;
+}
 
-        ul {
-            padding-left: 20px;
-        }
+.flip-card-back {
+  transform: rotateY(180deg);
+  text-align: center;
+}
 
-        li {
-            margin-bottom: 8px;
-        }
-
-        .btn {
-            display: block;
-            text-align: center;
-            margin-top: 15px;
-            padding: 12px;
-            border-radius: 6px;
-            text-decoration: none;
-            font-size: 18px;
-            color: white;
-        }
-
-        .phone { background: #27ae60; }
-        .phone:hover { background: #219150; }
-
-        .whatsapp { background: #25D366; }
-        .facebook { background: #1877f2; }
-
-        .footer {
-            text-align: center;
-            margin-top: 20px;
-            font-size: 14px;
-            color: #777;
-        }
-
- </style>
+a {
+  color: red;
+  text-decoration: none;
+  margin-top: 6px;
+}
+  /*Адаптация под экран телефона*/
+      @media (max-width: 480px) {
+      #consultation-form {
+      padding: 15px;
+      max-width: 90%;
+    }
+  }
+</style>
 </head>
 
 <body>
-<div class="container">
 
-    <!-- Фото работника -->
-    <div class="photo">
-        <img src="photo.jpg" alt="General Labourer">
+<div class="flip-card">
+  <div class="flip-card-inner" id="flipCard">
+
+    
+    <div class="flip-card-front">
+      <h3>GUINNESS</h3>
+      <p>PAUL - Loadmaster</p>
+      <p>Company STL</p>
+      <a href="tel:+3530874893815">📞 +353 087 489 3815</a>
+     
+    </div>
+     
+
+    
+    <div class="flip-card-back">
+      <h2>MONOBANK-VISA</h2>
+      <p>4441 1144 0787 6992</p>
+      <p>UA093220010000026208340026552</p>
+      <p>
+        
+      <a href="javascript:void(0)" onclick="shareCard()">📤 share</a>
+        
+      </p>
+   
     </div>
 
-    <h1>Paul-general Labourer for Hire</h1>
-
-    <p>
-        Reliable and hardworking labourer available in Dublin.<br>
-        Fast, honest and affordable work.
-    </p>
-
-    <h3>Services:</h3>
-    <ul>
-        <li>Loading & unloading</li>
-        <li>Painting (walls, fences)</li>
-        <li>Cleaning (houses, gardens, sites)</li>
-        <li>Small repairs</li>
-        <li>Help around the house</li>
-        <li>Other jobs on request</li>
-    </ul>
-
-    <!-- Контакты -->
-    <a class="btn phone" href="tel:+3530874893815">📞 Call: +353 087 489 3815</a>
-    <a class="btn whatsapp" href="https://wa.me/3530874893815">💬 WhatsApp</a>
-    <a class="btn facebook" href="https://facebook.com/yourprofile">📘 Facebook</a>
-
-  
-
-    <div class="footer">
-        Available 7 days a week • Dublin
-    </div>
-
+  </div>
 </div>
+
+<script>
+
+const flipCard = document.getElementById('flipCard');
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (isTouchDevice) {
+  flipCard.addEventListener('click', () => {
+    flipCard.classList.toggle('flipped');
+  });
+}
+
+// Web Share API
+function shareCard() {
+  if (navigator.share) {
+    navigator.share({
+      title: "Andrii - Web Developer",
+      text: "Моя цифровая визитка:",
+      url: window.location.href
+    });
+  } else {
+    alert("Sharing is not supported bu this browser");
+  }
+}
+</script>
+<script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/vault/service-worker.js")
+    .then(() => console.log("Service Worker registered"));
+}
+</script>
 
 </body>
 </html>
      
+
 
 
 
