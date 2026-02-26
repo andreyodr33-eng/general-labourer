@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="format-detection" content="telephone=no">
+ <meta name="format-detection" content="telephone=no">
 <title>PAUL</title>
 
 <link rel="manifest" href="manifest.json">
@@ -37,7 +37,7 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transform-style: preserve-3d;
+  transform-style: preserve-3d; 
   -webkit-transform-style: preserve-3d;
   transition: transform 0.8s;
 }
@@ -57,7 +57,7 @@ body {
   width: 100%;
   height: 100%;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
+  -webkit-backfase-visibility: hidden;
   border-radius: 12px;
   padding: 15px;
   box-sizing: border-box;
@@ -98,22 +98,22 @@ a {
 
 <body>
 
-
-  <div class="flip-card" id="flipCard">
+ <div class="flip-card" id="flipCard">
     <div class="flip-card-inner">
-    
+    <!-- Передняя сторона -->
     <div class="flip-card-front">
       <h3>GUINNESS</h3>
       <p>PAUL - Loadmaster</p>
       <p>Company STL</p>
-      <a href="tel:+353874893815">📞 +353 87 489 3815</a>
-    </div>
-      <div class="flip-card-back">
+      <a href="tel:+353874919018">📞 +353 87 491 9018</a>
+  </div>
+     <!-- Задняя сторона -->
+    <div class="flip-card-back">
       <h2>MONOBANK-VISA</h2>
       <p>5375 4199 1406 3076</p>
       <p>UA093220010000026208340026552</p>
       <p>
-        
+        <!-- КНОПКА ПОДЕЛИТЬСЯ -->
       <a href="javascript:void(0)" onclick="shareCard()">📤 share</a>
         
       </p>
@@ -124,7 +124,7 @@ a {
 </div>
 
 <script>
-
+// Переворот на телефоне
 const flipCard = document.getElementById('flipCard');
 const flipInner = flipCard.querySelector('.flip-card-inner');
  
@@ -132,7 +132,7 @@ const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 if (isTouchDevice) {
   flipCard.addEventListener('click', () => {
-    flipCard.classList.toggle('flipped');
+    flipInner.classList.toggle('flipped');
   });
 }
 
@@ -145,7 +145,7 @@ function shareCard() {
       url: window.location.href
     });
   } else {
-    alert("Sharing is not supported bu this browser");
+    alert("Функция поделиться не поддерживается этим браузером");
   }
 }
 </script>
@@ -158,7 +158,23 @@ if ("serviceWorker" in navigator) {
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
      
+
 
 
 
