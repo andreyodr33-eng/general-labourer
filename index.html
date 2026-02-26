@@ -124,6 +124,8 @@ a {
 <script>
 
 const flipCard = document.getElementById('flipCard');
+const flipInner = flipCard.querySelector('.flip-card-inner');
+ 
 const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
 
 if (isTouchDevice) {
@@ -155,6 +157,7 @@ if ("serviceWorker" in navigator) {
 </body>
 </html>
      
+
 
 
 
