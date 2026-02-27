@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <meta name="format-detection" content="telephone=no">
-<title>PAUL</title>
+<title>CardVault</title>
 
 <link rel="manifest" href="manifest.json">
  <link rel="icon" href="icon-192.png" type="image/png">
@@ -108,13 +108,15 @@ a {
   text-decoration: none;
   margin-top: 6px;
 }
- .qr-code {
-  width: 70px;      /* уменьшили ширину */
-  height: 70px;     /* уменьшили высоту */
+
+.qr-code {
+  width: 100px;
+  height: 100px;
+  max-width: 80%;
   object-fit: contain;
   border-radius: 8px;
-  margin: 10px 0;   /* отступ сверху и снизу */
-}
+  margin: 10px 0;
+ }
   /*Адаптация под экран телефона*/
       @media (max-width: 480px) {
       #consultation-form {
@@ -138,11 +140,11 @@ a {
   </div>
      <!-- Задняя сторона -->
     <div class="flip-card-back">
-      <h3>Revolut</h3>
+     <h3>Revolut</h3>
       <img src="IMG_E1029.JPG" alt="QR Code" class="qr-code">
-       <!-- КНОПКА ПОДЕЛИТЬСЯ -->
+      <!-- КНОПКА ПОДЕЛИТЬСЯ -->
+      <p>
       <a href="javascript:void(0)" onclick="shareCard()">📤 share</a>
-        
       </p>
    
     </div>
@@ -199,8 +201,20 @@ if ("serviceWorker" in navigator) {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
        
      
+
 
 
 
